@@ -93,7 +93,7 @@ def train_and_save_model(test_size: float = 0.5, random_state: int = 42):
     # Save the pipeline
     os.makedirs(MODELS_DIR, exist_ok=True)
     joblib.dump(pipeline, MODEL_PATH)
-    print(f"\n✅ Model saved to: {MODEL_PATH}")
+    print(f"\n Model saved to: {MODEL_PATH}")
 
 
 def load_model():
