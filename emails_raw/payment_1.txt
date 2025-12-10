@@ -1,0 +1,8 @@
+Subject: Payment failed but money deducted
+
+Hello support,
+
+I tried to pay for my order but the payment failed. However, the amount has been debited from my bank account. Please check and confirm the status or refund.
+
+Thanks,
+User

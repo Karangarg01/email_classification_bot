@@ -1,0 +1,6 @@
+scikit-learn
+pandas
+numpy
+nltk
+python-dotenv
+openpyxl
