@@ -15,17 +15,17 @@ OUTPUT_FILE = os.path.join(PROCESSED_DIR, "classified_emails.xlsx")
 def main():
     logger = get_logger()
 
-    # 1️⃣ Load dataset
+    # Load dataset
     df = load_email_dataset()
     print("🔹 Dataset preview:")
     print(df.head())
     print("\n🔹 Label distribution:")
     print(df["label"].value_counts())
 
-    # 2️⃣ Train model and save it (you can skip this once model is trained)
+    # Train model and save it (you can skip this once model is trained)
     train_and_save_model()
 
-    # 3️⃣ Classify each email using the saved model
+    # Classify each email using the saved model
     records = []
     for _, row in df.iterrows():
         filename = row["filename"]
@@ -46,12 +46,12 @@ def main():
             "Text": text,
         })
 
-    # 4️⃣ Save results to Excel
+    # Save results to Excel
     os.makedirs(PROCESSED_DIR, exist_ok=True)
     result_df = pd.DataFrame(records)
     result_df.to_excel(OUTPUT_FILE, index=False)
-    print(f"\n✅ Classified email report saved to: {OUTPUT_FILE}")
-    print("🎉 Email classification pipeline finished!")
+    print(f"Classified email report saved to: {OUTPUT_FILE}")
+    print("Email classification pipeline finished!")
 
 
 if __name__ == "__main__":
